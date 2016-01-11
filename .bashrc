@@ -5,3 +5,5 @@ if [ -x "`which go`" ] ; then
 	export GOPATH=$HOME/go
 	export PATH=$PATH:$GOPATH/bin
 fi
+
+export TERM=xterm-256color
