@@ -10,6 +10,8 @@ brew 'tmux'
 brew 'wget'
 brew 'openssl'
 brew 'mcrypt'
+brew 'texinfo'
+brew 'ag'
 
 tap 'mackerelio/mackerel-agent'
 brew 'mackerel-agent'

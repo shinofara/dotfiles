@@ -11,7 +11,7 @@
     (eval-print-last-sexp)))
 
 ;; el-get.lock ファイルにバージョン固定の指定を書き出す
-(el-get-bundle 'tarao/el-get-lock)
+(el-get-bundle tarao/el-get-lock)
 (el-get-lock)
 
 ;; init-loader.el を利用して設定を分割
@@ -24,3 +24,17 @@
 
 ;;; init.el ends here
 
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   (quote
+    ("aed65eaa2b5e49d6743efd8056f4bf375436dba34f636dee094a62de22ce03f3" "9fd20670758db15cc4d0b4442a74543888d2e445646b25f2755c65dcd6f1504b" default))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

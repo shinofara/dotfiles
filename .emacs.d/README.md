@@ -1,2 +1,2 @@
-$ git clone https://github.com/dimitri/el-get.git
-$ emcs
+brew install texinfo
+brew link --force texinfo
