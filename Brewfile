@@ -10,8 +10,9 @@ tap 'homebrew/science' || true
 # Formulaを更新
 #upgrade
 
+brew 'tmux'
 brew 'emacs', args: ['with-gnutls']
 
 tap 'caskroom/fonts'
-brew 'font-myrica'
-brew 'font-myricam'
+cask 'font-myrica'
+cask 'font-myricam'
