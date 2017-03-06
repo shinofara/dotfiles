@@ -48,26 +48,27 @@ symlink ${PROFILE_PATHS}
 # conf
 symlink ${CONF_PATHS}
 
-if [ ! -s ${DOT_VIM_DIR} ] ; then 
+if [ ! -s ${DOT_VIM_DIR} ] ; then
   cmd="cp -r ${DOTFILES_DIR}/.vim ${DOT_VIM_DIR}"
   echo ${cmd}; ${cmd}
 fi
 
-if [ ! -s ${DOT_VIM_BUNDLE_DIR} ] ; then 
+if [ ! -s ${DOT_VIM_BUNDLE_DIR} ] ; then
   mkdir -pv ${DOT_VIM_BUNDLE_DIR}
 fi
 
-if [ ! -s ${NEOBUNDLE_VIM_DIR} ] ; then 
+if [ ! -s ${NEOBUNDLE_VIM_DIR} ] ; then
   git clone git://github.com/Shougo/neobundle.vim ${NEOBUNDLE_VIM_DIR}
 fi
 
 # macの場合
 if [ `uname` = "Darwin" ]; then
   if [ ! -s /usr/local/bin/brew ]; then
-    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-    brew bundle
+      /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+      brew tap homebrew/bundle
   fi
-
+  brew tap caskroom/fonts
+  brew cask install font-myrica
+  brew cask install font-myricam
+  brew bundle
 fi
-
-
