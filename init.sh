@@ -7,6 +7,11 @@ brew bundle
 
 echo "End brew bundle"
 
+echo "Start Font"
+cp -f /opt/homebrew/opt/ricty/share/fonts/Ricty* ~/Library/Fonts/
+fc-cache -vf
+echo "End Font"
+
 ## Fish Setup
 
 echo "Start setup fish"
@@ -25,6 +30,11 @@ cd fonts
 cd $CURRENT_DIR
 rm -rf /tmp/fonts
 cp .config/fish/* ~/.config/fish/
+
+
+
+fisher install oh-my-fish/plugin-peco oh-my-fish/theme-bobthefish 0rax/fish-bd
+
 
 echo "End setup fish"
 
