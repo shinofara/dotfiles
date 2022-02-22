@@ -13,3 +13,10 @@ set PATH $PATH /Users/shinofara/.local/bin
 set PATH $PATH /Users/shinofara/go/bin
 set -gx VOLTA_HOME "$HOME/.volta"
 set -gx PATH "$VOLTA_HOME/bin" $PATH
+
+# Python
+set -x PYENV_ROOT $HOME/.pyenv
+set -x PATH  $PYENV_ROOT/bin $PATH
+pyenv init - | source
+
+set -x PATH $HOME/Library/Python/3.9/bin $PATH
