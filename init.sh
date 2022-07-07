@@ -3,7 +3,7 @@ CURRENT_DIR=$(pwd)
 
 echo "Start brew bundle"
 
-brew bundle
+/opt/homebrew/bin/brew bundle
 
 echo "End brew bundle"
 
