@@ -1,6 +1,7 @@
 brew 'tmux'
 brew 'emacs'
 brew 'jq'
+brew 'ag'
 
 # Fish
 brew 'fish'
