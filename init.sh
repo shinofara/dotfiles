@@ -3,6 +3,7 @@ CURRENT_DIR=$(pwd)
 
 echo "Start brew bundle"
 
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 brew bundle
 
 echo "End brew bundle"
