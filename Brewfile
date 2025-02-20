@@ -1,4 +1,5 @@
 brew 'tmux'
+brew 'gh'
 brew 'emacs'
 brew 'jq'
 

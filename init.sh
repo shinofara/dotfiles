@@ -4,6 +4,7 @@ CURRENT_DIR=$(pwd)
 echo "Start brew bundle"
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+eval "$(/opt/homebrew/bin/brew shellenv)"
 brew bundle
 
 echo "End brew bundle"
@@ -22,7 +23,7 @@ if [ ! -f /opt/homebrew/bin/fish ]; then
     echo /opt/homebrew/bin/fish >> /etc/shells
 fi
 mkdir -p .config/fish
-curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fisher
+curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
 
 cd /tmp
 gh repo clone powerline/fonts
